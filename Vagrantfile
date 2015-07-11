@@ -6,9 +6,11 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure(2) do |config|
-  # The most common configuration options are documented and commented below.
-  # For a complete reference, please see the online documentation at
-  # https://docs.vagrantup.com.
+  config.vm.provision "chef_zero" do |chef|
+  # Specify the local paths where Chef data is stored
+  chef.cookbooks_path = "cookbooks"
+  chef.roles_path = "roles"
+  chef.nodes_path = "nodes"
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
