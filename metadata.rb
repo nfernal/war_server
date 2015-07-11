@@ -7,3 +7,4 @@ long_description 'Installs/Configures war_server'
 
 version          '0.1.0'
 
+depends 'apache2'

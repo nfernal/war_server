@@ -13,4 +13,5 @@ platforms:
 suites:
   - name: default
     run_list:
+      - recipe[war_server::default]
     attributes:
